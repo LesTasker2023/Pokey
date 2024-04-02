@@ -1,0 +1,28 @@
+.pokemon-type {
+  display: flex;
+  position: relative;
+  top: 6px;
+  left: 6px;
+  height: 25px;
+  width: 25px;
+  filter: drop-shadow(0px 0px 2px #000);
+
+  &--primary {
+    height: 100%;
+    width: 100%;
+    border: 2px solid white;
+    border-radius: 100%;
+  }
+  &--secondary {
+    position: absolute;
+    bottom: -4px;
+    left: 16px;
+
+    height: 75%;
+    width: 75%;
+    margin-top: auto;
+    margin-right: 5px;
+    border: 2px solid white;
+    border-radius: 100%;
+  }
+}

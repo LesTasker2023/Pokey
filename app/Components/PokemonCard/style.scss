@@ -1,0 +1,111 @@
+.pokemon-card {
+  display: flex;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  height: 300px;
+  aspect-ratio: 10/12;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 0px 8px #fff;
+  margin: auto;
+  color: #000;
+  transition: all 0.3s ease;
+  background-position: center;
+  background-size: 400%;
+
+  &:hover {
+    filter: blur(1);
+    .pokemon-card__name {
+      bottom: -300px;
+    }
+    .pokemon-card__number,
+    .pokemon-card__type,
+    .pokemon-card__stats {
+      opacity: 0;
+    }
+    .pokemon-card__image {
+      width: 100%;
+      margin-top: 30px;
+    }
+
+    &::after {
+      bottom: -300px;
+    }
+    background-size: 200%;
+  }
+
+  &__large-text {
+    margin: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: absolute;
+    font-size: 32px;
+    z-index: 99;
+  }
+  &__stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: right;
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    z-index: 100;
+    color: #fff;
+    gap: 3px;
+  }
+  &__stat-text {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+    text-align: end;
+  }
+  &__name {
+    bottom: -24px;
+    left: 0;
+    transform: rotate(-90deg);
+    transform-origin: top left;
+    transition: all 0.3s ease;
+    z-index: 9;
+    color: #fff;
+    filter: drop-shadow(-1px 1px 2px #000);
+  }
+
+  &__number {
+    color: #fff;
+    margin: 0;
+    margin-left: auto;
+    position: absolute;
+    font-size: 24px;
+    opacity: 0.5;
+    right: 10px;
+    top: 0;
+  }
+
+  &__image {
+    position: absolute;
+    inset: 0;
+    width: 85%;
+    margin-left: auto;
+    margin-top: 24px;
+    filter: drop-shadow(0px 0px 3px black);
+    transition: all 0.6s ease;
+    font-size: 32px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    right: 0;
+    background-color: #303030;
+    height: 33%;
+    width: 150%;
+    transform: rotate(-30deg);
+    z-index: 10;
+    transform-origin: bottom;
+    transition: all 0.3s ease;
+    border-top: 2px solid #fff;
+  }
+}

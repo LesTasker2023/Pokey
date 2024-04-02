@@ -1,0 +1,70 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: auto;
+  align-items: center;
+  gap: 24px;
+  padding: 24px;
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+
+  &__wrapper {
+    display: flex;
+    border: none;
+  }
+  &__image {
+    width: 200px;
+  }
+  &__search {
+    display: flex;
+    height: 30px;
+    border-radius: 6px;
+    padding: 0 12px;
+    background-color: white;
+    &-input {
+      display: flex;
+      width: auto;
+      min-width: none;
+      &:focus-visible {
+        border: none;
+        outline: none;
+      }
+    }
+    &-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 6px;
+      padding: 0 12px;
+      border: none;
+      background-color: white;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 30px;
+    }
+  }
+}
+
+.closed {
+  animation: close 0.5s forwards ease;
+  @keyframes close {
+    from {
+      max-width: 300px;
+    }
+    to {
+      max-width: 0px;
+    }
+  }
+}
+.open {
+  animation: expand 0.5s forwards ease;
+  @keyframes expand {
+    from {
+      max-width: 0px;
+    }
+    to {
+      max-width: 300px;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
+* {
+  font-family: "Cinzel", serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  border: none;
+  outline: none;
+}
+body {
+  width: 100%;
+  background-color: #0a0a0a;
+}
+
+.pokemon-list__wrapper {
+  display: grid;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  margin: auto;
+  grid-template-columns: 1fr;
+  max-width: 1200px;
+}
+
+@media (min-width: 626px) {
+  .pokemon-list__wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .header {
+    max-width: 512px;
+  }
+}
+@media (min-width: 799px) {
+  .pokemon-list__wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1072px) {
+  .pokemon-list__wrapper {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+  .header {
+    flex-direction: row;
+    max-width: 1072px;
+  }
+}
+@media (min-width: 1440px) {
+  .pokemon-list__wrapper {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}

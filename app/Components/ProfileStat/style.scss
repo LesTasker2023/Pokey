@@ -1,0 +1,25 @@
+.stat {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: fit-content;
+  &__value-label {
+    margin-left: 12px;
+    display: flex;
+    position: relative;
+    box-shadow: 0 10px 40px -10px #fff;
+    border-radius: 100px;
+    background: #fff;
+    height: 30px;
+    width: 0;
+  }
+}
+
+progress::-moz-progress-bar {
+  background: attr(data-label);
+}
+progress::-webkit-progress-value {
+  background: attr(data-label);
+}
+progress {
+  color: attr(data-label);
+}

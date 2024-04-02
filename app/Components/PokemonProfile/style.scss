@@ -1,0 +1,22 @@
+.pokemon-profile {
+  padding-bottom: 126px;
+  &__stats {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    color: #fff;
+
+    margin-right: auto;
+
+    @media (min-width: 768px) {
+      margin-top: 60px;
+      padding: 0 56px;
+
+      width: fit-content;
+      margin-top: 120px;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
