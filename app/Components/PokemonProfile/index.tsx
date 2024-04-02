@@ -49,6 +49,7 @@ const PokemonProfile = ({ pokemonData }: Props) => {
           {pokemonData.stats.map((stat) => {
             return (
               <ProfileStat
+                key={stat.stat.name}
                 data-label={themeColour}
                 label={stat.stat.name}
                 value={stat.base_stat}
