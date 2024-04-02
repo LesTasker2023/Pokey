@@ -39,8 +39,7 @@ const Header = () => {
         <datalist id="list">
           <>
             {pokemonList?.results.map((pokemon) => {
-              return <option value={pokemon.name}>{pokemon.name}</option>;
-            })}
+             return <option key={pokemon.name} value={pokemon.name}>{pokemon.name}</option>;            })}
           </>
         </datalist>
 
